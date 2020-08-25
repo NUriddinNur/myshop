@@ -58,7 +58,7 @@ class ContactMessage(models.Model):
 class ContactForm(ModelForm):
     class Meta:
         model = ContactMessage
-        fields = ['name', 'email', 'subject', 'message']
+        fields = ['name','email', 'subject', 'message']
         widgets = {
             'name': TextInput(attrs={'class': 'input', 'placeholder':  'Name'}),
             'subject': TextInput(attrs={'class': 'input', 'placeholder': 'Subject'}),

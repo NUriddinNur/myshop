@@ -13,9 +13,9 @@ from .models import Setting, ContactForm, ContactMessage
 def index(request):
     setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
-    products_slider = Product.objects.all().order_by('id')[:4]
-    products_latest = Product.objects.all().order_by('-id')[:4]
-    products_picked = Product.objects.all().order_by('?')[:4]
+    products_slider = Product.objects.all().order_by('id')[:8]
+    products_latest = Product.objects.all().order_by('-id')[:8]
+    products_picked = Product.objects.all().order_by('?')[:8]
     page = "home"
     context ={'setting': setting,
               'page': page,
